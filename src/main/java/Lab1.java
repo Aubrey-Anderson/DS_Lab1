@@ -31,8 +31,18 @@ public class Lab1
 	 */
 	public static int maxIndex(int array[], int len)
 	{
-
-		return 0;
+		if(len == 0) {
+			return -1;
+		}
+		int biggest = array[0];
+		int index = 0;
+		for(int i = 0; i < len; i++) {
+			if(array[i] > biggest) {
+				biggest = array[i];
+				index = i;
+			}
+		}
+		return index;
 	}
 
 	/**
