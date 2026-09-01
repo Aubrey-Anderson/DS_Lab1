@@ -11,13 +11,13 @@ public class Lab1
 	public static int squares(int n)
 	{
 		int sum = 0;
-		if(n < 0)
+		if (n < 0)
 		{
 			return -1;
 		}
-		for(int i = 1; i <= n; i++)
+		for (int i = 1; i <= n; i++)
 		{
-			sum += i*i;
+			sum += i * i;
 		}
 		return sum;
 	}
@@ -31,13 +31,16 @@ public class Lab1
 	 */
 	public static int maxIndex(int array[], int len)
 	{
-		if(len == 0) {
+		if (len == 0)
+		{
 			return -1;
 		}
 		int biggest = array[0];
 		int index = 0;
-		for(int i = 0; i < len; i++) {
-			if(array[i] > biggest) {
+		for (int i = 0; i < len; i++)
+		{
+			if (array[i] > biggest)
+			{
 				biggest = array[i];
 				index = i;
 			}
@@ -53,7 +56,17 @@ public class Lab1
 	 */
 	public static boolean seek(int array[], int len, int target)
 	{
-
+		if (len == 0)
+		{
+			return false;
+		}
+		for(int i = 0; i < len; i++)
+		{
+			if(array[i] == target)
+			{
+				return true;
+			}
+		}
 		return false;
 
 	}
