@@ -80,7 +80,24 @@ public class Lab1
 	 */
 	public static int fib(int n)
 	{
-		return 0;
+		if(n < 1) 
+		{
+			return 0;
+		}
+		int firstValue = 1;
+		int secondValue = 1;
+		int current = 1;
+		if(n == 1 || n == 2) 
+		{
+			return 1;
+		}
+		for(int i = 3; i <= n; i++)
+		{
+			current = firstValue + secondValue;
+			firstValue = secondValue;
+			secondValue = current;
+		}
+		return current;
 	}
 
 }
